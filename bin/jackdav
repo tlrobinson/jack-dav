@@ -1,0 +1,8 @@
+#!/usr/bin/env narwhal
+
+var jack = require("jack"),
+    jackdav = require("jackdav");
+
+var app = jackdav.JackDAV();
+
+require("jack/handler/simple").run(jack.CommonLogger(app));
