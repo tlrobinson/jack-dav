@@ -3,6 +3,11 @@
 var jack = require("jack"),
     jackdav = require("jackdav");
 
-var app = jackdav.JackDAV();
+
+var root = system.args[1] || system.fs.cwd();
+
+print("Starting jack-dav with root " + root);
+
+var app = jackdav.JackDAV({ root : root });
 
 require("jack/handler/simple").run(jack.CommonLogger(app));
