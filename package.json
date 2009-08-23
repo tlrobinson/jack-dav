@@ -1,5 +1,7 @@
 {
     "name": "jack-dav",
-    "author": "Tom Robinson",
-    "dependencies": ["jack"]
+    "dependencies": ["narwhal", "jack"],
+    "author": "Tom Robinson (http://tlrobinson.net/)",
+    "description": "A JSGI compatible WebDAV server, based on RackDAV",
+    "keywords": ["jack", "webdav", "dav", "rackdav"]
 }
