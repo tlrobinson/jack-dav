@@ -1,6 +1,7 @@
 #!/usr/bin/env narwhal
 
 var jack = require("jack"),
+    jackup = require("jackup"),
     jackdav = require("jackdav");
 
 
@@ -10,4 +11,6 @@ print("Starting jack-dav with root " + root);
 
 var app = jackdav.JackDAV({ root : root });
 
-require("jack/handler/simple").run(jack.CommonLogger(app));
+var handler = jackup.detectHandler();
+
+require("jack/handler/"+handler).run(jack.CommonLogger(app));
